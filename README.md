@@ -8,7 +8,7 @@
 
 ### 📦 Installation
 
-- [Code (Less World Code)](https://github.com/nevergivemeupotherclips-tech/-BETA-Bloxd-Lua-/tree/5c103050e09cee355fd4d7e31afbe829d69913d4/Source)  
+- [Code (Less World Code)](https://github.com/nevergivemeupotherclips-tech/-BETA-Bloxd-Lua-/blob/main/Source/MINIFIED)  
 - [Different One Later](#)  
 
 ---
