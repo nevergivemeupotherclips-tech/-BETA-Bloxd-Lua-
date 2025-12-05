@@ -1,1 +1,22 @@
-
+var LuaTimers={},LuaTimerId=0
+function addTimer(c,t){if(typeof c!="function"){api.log("Error: Timer callback is not a function");return false}LuaTimerId=LuaTimerId+1;LuaTimers[LuaTimerId]={time:t,callback:c};return LuaTimerId}
+function tick(){for(var id in LuaTimers){LuaTimers[id].time=LuaTimers[id].time-1;if(LuaTimers[id].time<=0){try{LuaTimers[id].callback()}catch(e){api.log(e)}delete LuaTimers[id]}}}
+function print(m,s){if(!s)s={color:"#FFFFFF"};for(var p of api.getPlayerIds()){api.sendMessage(p,String(m),{color:s.color})}}
+function warn(m,s){if(!s)s={color:"#FFA500"};for(var p of api.getPlayerIds()){api.sendMessage(p,"[WARN] "+String(m),{color:s.color})}}
+function error(m){throw new Error(String(m))}
+function wait(sec,cb){var t=Math.ceil(sec*20);addTimer(cb,t)}
+function localTable(){return{}}
+var and=function(a,b){return a&&b},or=function(a,b){return a||b},not=function(a){return!a}
+var math=localTable()
+math.floor=function(n){return Math.floor(n)}
+math.ceil=function(n){return Math.ceil(n)}
+math.abs=function(n){return Math.abs(n)}
+math.sqrt=function(n){return Math.sqrt(n)}
+math.max=function(a,b){return a>b?a:b}
+math.min=function(a,b){return a<b?a:b}
+math.random=function(a,b){if(!a&&!b)return Math.random();if(!b)return Math.floor(Math.random()*a)+1;return Math.floor(Math.random()*(b-a+1))+a}
+function forNumber(s,f,st,cb){var i=s;if(!st)st=1;while(i<=f){cb(i);i=i+st}}
+function whileLoop(c,b){while(c()){b()}}
+function repeatUntil(b,c){b();while(!c()){b()}}
+function pairs(t,cb){for(var k in t){cb(k,t[k])}}
+function ipairs(t,cb){for(var i=1;i<=t.length;i++){cb(i,t[i])}}
