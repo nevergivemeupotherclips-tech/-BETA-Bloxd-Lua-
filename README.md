@@ -1,8 +1,8 @@
 ### What is Lua?
 
-- [📦 Installation](#-installation)  
+- [📦 Installation](#📦-installation)  
 - [🛠 Usage](https://github.com/nevergivemeupotherclips-tech/-BETA-Bloxd-Lua-/blob/main/Usage/Usages)  
-- [Desc](#-description)  
+- [Desc](#📝-description)  
 
 ---
 
