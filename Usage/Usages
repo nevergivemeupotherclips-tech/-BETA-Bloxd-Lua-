@@ -1,1 +1,5 @@
-
+/**
+ * @msg {"Hello"} Hello - The message It calls
+ * @color "#00FF00" Color - It calls the Message with a color
+*/
+print("Hello!", { color: "#00FF00" })
