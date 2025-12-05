@@ -22,3 +22,4 @@ function whileLoop(c,b){while(c()){b()}}
 function repeatUntil(b,c){b();while(!c()){b()}}
 function pairs(t,cb){for(var k in t){cb(k,t[k])}}
 function ipairs(t,cb){for(var i=1;i<=t.length;i++){cb(i,t[i])}}
+tick()
