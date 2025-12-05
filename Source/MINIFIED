@@ -1,3 +1,5 @@
+// Copyright (c) 2025 Steal_
+// Cerdit Stealproo_
 var LuaTimers={},LuaTimerId=0
 function addTimer(c,t){if(typeof c!="function"){api.log("Error: Timer callback is not a function");return false}LuaTimerId=LuaTimerId+1;LuaTimers[LuaTimerId]={time:t,callback:c};return LuaTimerId}
 function tick(){for(var id in LuaTimers){LuaTimers[id].time=LuaTimers[id].time-1;if(LuaTimers[id].time<=0){try{LuaTimers[id].callback()}catch(e){api.log(e)}delete LuaTimers[id]}}}
